@@ -1313,15 +1313,16 @@ html{
             height: 500px;
             display: flex;
             align-items: center;
-            justify-content: space-evenly;
+            justify-content: center;
             margin: 10px;
         }
         .bib3c-connect{
             height: 100%;
             display: flex;
             flex-direction: column;
-            justify-content:space-around ;
+            justify-content:space-evenly ;
             text-align: center;
+            margin-right: 150px;
         }
             .bib3c-con-number {
                 font-size: 24px;
