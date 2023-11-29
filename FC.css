@@ -252,7 +252,7 @@ html{
                         }
 
                         .hb2c-buttom button:hover{
-                            background-color: #000;
+                            border: 3px solid #fff;
                             transition: 0.3s;
                         }
 
