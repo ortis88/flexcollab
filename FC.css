@@ -25,7 +25,7 @@ html{
                 width: 50%;
                 margin-left: 240px;
             }
-                .header-image img{
+            .header-image img{
                 }
             .nav{
                 margin-right: 240px;
@@ -38,6 +38,7 @@ html{
                     width: 511px;
                     height: 30px;
                     justify-content:space-between;
+                    margin: 0 20px;
                 }
                     .nav-select a{
                         color: #000;
