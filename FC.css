@@ -3,7 +3,7 @@ html{
     scroll-behavior: smooth;
 }
 .container{
-    width: 1920px;
+    max-width: 1920px;
     height: auto;
     position: relative;
 }
@@ -11,7 +11,7 @@ html{
 /* 共用頁首 */
     .header{
         display: flex;
-        width: 100%;
+        max-width: 100%;
         height: 200px;
         background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgb(255, 255, 255) 20%);
     }
@@ -20,13 +20,12 @@ html{
             width: 100%;
             align-items: center;
             justify-content: space-between;
-            
         }
             .header-image{
+                width: 50%;
                 margin-left: 240px;
             }
                 .header-image img{
-
                 }
             .nav{
                 margin-right: 240px;
@@ -43,10 +42,12 @@ html{
                     .nav-select a{
                         color: #000;
                         text-decoration: none;
-                        font-size: 20px; 
+                        font-size: 20px;
+                        margin: 0 10px; 
                     }
                 .nav-buttom{
-                    
+                    width: 150px;
+                    height: 50px;
                 }
                     .nav-buttom a{
                         width: 150px;
@@ -94,7 +95,7 @@ html{
     }
         .banner-img{
             display: flex;
-            width: 1920px;
+            width: 100%;
             height: 1035px;
         }
             .banner-mask{
@@ -104,7 +105,7 @@ html{
                 position: relative;
             }
             .banner-img img{
-                width: 1920px;
+                width: 100%;
                 height: 1035px;
                 position: absolute;
                 top: 0;
@@ -155,17 +156,20 @@ html{
         align-items: center;
     }
         .hb1-content{
-            width: 1680px;
+            width: 87.5%;
             height: 530px;
             display: flex;
+            justify-content: space-between;
         }
-            .hb1-img{}
+            .hb1-img img{
+            }
             .hb1-items{
+                flex-grow: 1;
+                margin-left: 100px;              
+                height: 530px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                flex-grow: 1;
-                padding-left: 160px;
             }
                 .hb1i-title h2{
                     color: #000;
@@ -175,7 +179,9 @@ html{
                     color: #000;
                     font-size: 20px;
                     line-height: 200%;
-                    margin-bottom: 40px;
+                }
+                /* p需調整 */
+                .hb1i-text p{
                 }
                 .hb1i-buttom{
                     align-self: end;
@@ -220,6 +226,7 @@ html{
                 margin: 0 240px;
                 display: flex;
                 flex-direction: row;
+                align-items: center;
                 justify-content: center;
                 position: absolute;
                 top: 0;
