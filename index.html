@@ -10,7 +10,7 @@
     <script src="https://kit.fontawesome.com/d7194ab2e4.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Onest:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body{
             font-family: 'Noto Sans TC', sans-serif;
@@ -21,58 +21,48 @@
 </head>
 <body>
 
-<div class="container">
+<div class="header-container">
 
-    <div class="header">
+    <header>
         <div class="header-items">
           <div class="header-image">
               <a href="index.html">
                   <img src="pic/header/logowithtext.png" width="270px" >
               </a>
           </div>
-          <div class="nav">
-              <div class="nav-select">
-                  <a href="about.html">關於Flex Collab</a>
-                  <a href="news.html">最新消息</a>
-                  <a href="space_info.html">空間方案</a>
-                  <a href="service_info.html">服務內容</a>
-              </div>
-              <div class="nav-buttom">
-                  <a href="bookingpage.html">洽詢/預約</a>
-              </div>
-          </div>
+          <nav>
+            <a href="about.html">關於Flex Collab</a>
+            <a href="news.html">最新消息</a>
+            <a href="space_info.html">空間方案</a>
+            <a href="service_info.html">服務內容</a>
+            <a id="nav-buttom" href="bookingpage.html">洽詢/預約</a>
+          </nav>
         </div>
-    </div>
-    
+    </header>
+
+</div>
+
+<div class="header-wrap">
+
     <!-- banner -->
 
     <div class="banner">
-        <div class="banner-img">
-            <div class="banner-mask"></div>
-            <img src="pic/homepage/homepage-banner.png" alt="首頁Banner">
-        </div> 
+        <div class="banner-mask"></div>
+        <img src="pic/homepage/homepage-banner.png" alt="首頁Banner">
     </div>
-    <div class="banner-invisible">
-        <div class="banner-text">
-            <div class="bat-up">
-                <h1><strong>靈活空間，隨心所欲。</strong></h1>
-            </div>
-            <div class="bat-down">
-                <a href="#hb1">
-                    <div class="batd-text">
-                    <span>了解更多</span>
-                </div>
-                <div class="batd-arrow">
-                    <img src="pic/homepage/homepage-banner-ar.png" alt="首頁Banner箭頭">
-                </div>
-                </a>
-            </div>
-        </div> 
-    </div>
+    <div class="banner-text">
+        <div class="bat-context">
+            <h1>靈活空間，隨心所欲。</h1><br>
+            <a href="">
+                <span>了解更多</span>
+                <img src="pic/homepage/homepage-banner-ar.png" alt="首頁Banner箭頭">
+            </a>
+        </div>
+    </div> 
 
     <!-- 第一區塊 -->
 
-    <div class="homepage-block1" id="hb1">
+    <!-- <div class="homepage-block1" id="hb1">
         <div class="hb1-content">
             <div class="hb1-img">
                 <img src="pic/homepage/himepage-block1-pic.png" alt="">
@@ -97,11 +87,11 @@
                     </div>
                 </div>
             </div>
-    </div>
+    </div> -->
 
     <!-- 第二區塊 -->
 
-    <div class="homepage-block2">
+    <!-- <div class="homepage-block2">
         <div class="hb2-img">
             <div class="hb2-mask"></div>
             <img src="pic/homepage/homepage-bolck2-pic.png" alt="">
@@ -129,10 +119,10 @@
             </div>
         </div>
         <div class="hb2-spacing"></div>
-    </div>
+    </div> -->
 
     <!-- 第三區塊 -->
-    <div class="homepage-block3">
+    <!-- <div class="homepage-block3">
         <div class="hb3-img">
             <div class="hb3-mask"></div>
             <img src="pic/homepage/homepage-block3-pic.png" alt="">
@@ -148,11 +138,11 @@
                 </div>
             </a>
         </div>
-    </div>
+    </div> -->
 
     <!-- 第四區塊 -->
     
-    <div class="homepage-newswrap">
+    <!-- <div class="homepage-newswrap">
         <div class="hnw-content">
             <div class="hnw-title">
                 <h2>最新消息</h2>
@@ -194,31 +184,32 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- footer -->
 
-    <div class="container">
-        <div class="footer">
-           <div class="footer-items">
-               <div class="footer-nav">
-                   <div class="fn-select">
-                       <a href="about.html">關於Flex Collab</a>
-                       <a href="news.html">最新消息</a>
-                       <a href="space_info.html">空間方案</a>
-                       <a href="service_info.html">服務內容</a>
-                       <a href="bookingpage.html">洽詢/預約</a>
-                   </div>
-               </div>
-               <div class="footer-contact">
-                   <div class="fc-logo">
-                        <a href="index.html">
-                            <img src="pic/footer/LOGOgray.png" alt="Footer的logo">
-                        </a>
-                   </div>
-                   <div class="fc-inforow">
-                       <div class="fc-info">
-                           <div class="fc-title">
+<!-- <div class="footer-container">
+
+    <div class="footer">
+        <div class="footer-items">
+            <div class="footer-nav">
+                <div class="fn-select">
+                    <a href="about.html">關於Flex Collab</a>
+                    <a href="news.html">最新消息</a>
+                    <a href="space_info.html">空間方案</a>
+                    <a href="service_info.html">服務內容</a>
+                    <a href="bookingpage.html">洽詢/預約</a>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <div class="fc-logo">
+                    <a href="index.html">
+                        <img src="pic/footer/LOGOgray.png" alt="Footer的logo">
+                    </a>
+                </div>
+                    <div class="fc-inforow">
+                        <div class="fc-info">
+                            <div class="fc-title">
                                <span>Contact</span>
                            </div>
                            <div class="fc-snsicon">
@@ -235,17 +226,19 @@
                                <span>104台北市中山區南京東路三段219號5樓</span>
                            </div>
                            <div class="fc-border"></div>
-                       </div>
-                   </div>
-               </div>
-               <div class="copyright">
-                   <span>本網站為緯育TibaMe前端班 CDH104 學員專題作品，本平台僅供學習、展示之用。</span>
-               </div>
-           </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <span>本網站為緯育TibaMe前端班 CDH104 學員專題作品，本平台僅供學習、展示之用。</span>
+                </div>
+            </div>
         </div>
-   </div>
+    </div>
 
-</div>
+</div> -->
+    
+
 
 
 </body>
