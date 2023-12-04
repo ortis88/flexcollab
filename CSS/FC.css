@@ -92,7 +92,7 @@ nav a:hover{
 
 /* 內頁寬度限制 */
 
-.header-wrap{
+.homepage-wrap{
     max-width: 1440px;
     margin: auto;
     position: relative;
