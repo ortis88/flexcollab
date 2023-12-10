@@ -3,35 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="FC.css">
-    <link rel="stylesheet" href="FC-CSSReset.css">
-</head>
-<body>
-<div class="container">
+    <title>標題</title>
+    <link rel="icon" href="pic/其他/LOGO B 修改2.ico">
+    <link rel="stylesheet" href="../css/FC-RWD.css">
+    <link rel="stylesheet" href="../css/FC-CSSReset.css">
+    <script src="https://kit.fontawesome.com/d7194ab2e4.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Onest:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body{
+            font-family: 'Noto Sans TC', sans-serif;
+            font-family: 'Onest', sans-serif;
+        }
+    </style>
 
-    <div class="header">
-        <div class="header-items">
-          <div class="header-image">
-              <a href="index.html">
-                  <img src="pic/header/logowithtext.png" width="270px" >
-              </a>
-          </div>
-          <div class="nav">
-              <div class="nav-select">
-                  <a href="about.html">關於Flex Collab</a>
-                  <a href="news.html">最新消息</a>
-                  <a href="space_info.html">空間方案</a>
-                  <a href="service_info.html">服務內容</a>
-              </div>
-              <div class="nav-buttom">
-                  <a href="bookingpage.html">洽詢/預約</a>
-              </div>
-          </div>
+</head>
+
+<body>
+
+<header>
+    <input type="checkbox" id="header-switch">
+    <div class="header-space">
+        <div class="header-content">
+            <div class="header-image">
+                <a href="index.html">
+                    <img src="../pic/header/logowithtext.png" width="270px" >
+                </a>
+            </div>
+            <label for="header-switch" class="header-burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+            </label>
+            <nav>
+                <a href="about.html">關於Flex Collab</a>
+                <a href="news.html">最新消息</a>
+                <a href="space_info.html">空間方案</a>
+                <a href="service_info.html">服務內容</a>
+                <a id="nav-buttom" href="bookingpage.html">洽詢/預約</a>
+            </nav>
         </div>
     </div>
-    
-</div>
+    <div id="nav-menu" class="hidden">
+        <a href="about.html">關於Flex Collab</a>
+        <span></span>
+        <a href="news.html">最新消息</a>
+        <span></span>
+        <a href="space_info.html">空間方案</a>
+        <span></span>
+        <a href="service_info.html">服務內容</a>
+        <span></span>
+        <a href="bookingpage.html">洽詢/預約</a>
+    </div>
+</header>
 
+<script src="../JavaScript/FC-1.js"></script>
+    
 </body>
 </html>

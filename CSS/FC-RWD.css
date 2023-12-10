@@ -1,0 +1,743 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 共用/頁首 */
+header {
+    max-width: 1440px;
+    width: 100%;
+    position: fixed;
+    z-index: 100000;
+}
+
+#header-switch {
+    display: none;
+}
+
+.header-space {
+    width: 90%;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 0 0 15px 15px;
+}
+
+.header-content {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header-image {
+    width: 30%;
+}
+
+.header-image img {
+    width: 150%;
+    margin: .5rem 0 0 0;
+}
+
+@media (width>=768px) {
+    .header-image img {
+        width: 60%;
+        margin: .5rem 0 0 0;
+    }
+}
+
+.header-burger {
+    width: 40px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (width>=768px) {
+    .header-burger {
+        display: none;
+    }
+}
+
+.header-burger span {
+    width: 80%;
+    height: 2px;
+    margin: 3px;
+    background-color: #000;
+}
+
+.header-content nav {
+    display: none;
+}
+
+@media (width>=768px) {
+    .header-content nav {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+}
+
+.header-content nav a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #000;
+    margin: 0 .8rem;
+}
+
+#nav-buttom {
+    background-color: #404E64;
+    color: #fff;
+    padding: .5rem 1rem;
+    border-radius: 15px;
+}
+
+/* 共用/頁首/手機版導行列 */
+#nav-menu {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: .5rem auto;
+    background-color: #404E64;
+    opacity: 0.9;
+    border-radius: 15px;
+}
+
+#nav-menu.hidden {
+    display: none;
+}
+
+@media (width>=768px) {
+    #nav-menu {
+        display: none;
+    }
+}
+
+#nav-menu a {
+    text-decoration: none;
+    display: block;
+    color: #fff;
+    font-size: 1rem;
+    padding: 2rem;
+}
+
+#nav-menu a:hover {
+    text-decoration: underline;
+}
+
+#nav-menu span {
+    width: 80%;
+    height: 1px;
+    background-color: #fff;
+}
+
+/* 共用/麵包屑 */
+/* 共用/內容寬度限制 */
+.wrap {
+    max-width: 1920px;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* 首頁/Banner */
+.banner {
+    position: relative;
+    top: 0;
+}
+
+.banner-mask {
+    width: 100%;
+    height: 700px;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(64, 78, 100, 1) 90%);
+    position: relative;
+    z-index: 3;
+}
+
+@media (width>=768px) {
+    .banner-mask {
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(64, 78, 100, 1) 90%);
+    }
+}
+
+.banner img {
+    width: 100%;
+    height: 700px;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    object-fit: cover;
+    object-position: center;
+}
+
+.banner-text {
+    width: 100%;
+    position: absolute;
+    top: 300px;
+    text-align: center;
+    z-index: 100;
+}
+
+.bat-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.bat-content h1 {
+    font-size: 1.8rem;
+    color: #fff;
+
+}
+
+.bat-content a {
+    text-decoration: none;
+    margin: .5rem;
+}
+
+.bat-content a span {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.bat-content a img {
+    width: 30px;
+    height: 15px;
+}
+
+@media (width>=768px) {
+    .banner-text {
+        width: 80%;
+        margin: 0 10%;
+        display: flex;
+        justify-content: flex-end;
+        text-align: left;
+    }
+
+    .bat-content {
+        width: 490px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .bat-content h1 {
+        font-size: 3rem;
+        color: #fff;
+    }
+
+    .bat-content a {
+        display: flex;
+        flex-direction: row;
+        text-decoration: none;
+        margin: .5rem;
+    }
+
+    .bat-content a:hover {
+        color: #000;
+    }
+
+    .bat-content a span {
+        font-size: 1.5rem;
+        color: #fff;
+    }
+
+    .bat-content a img {
+        margin-top: 3px;
+    }
+}
+
+/* 首頁第一區塊 */
+.homepage-block1 {
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 5% 0;
+}
+
+.hb1-img {
+    width: 90%;
+}
+
+.hb1-img img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+}
+
+.hb1-text {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hb1i-title h2 {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.hb1i-p {
+    width: 100%;
+    margin: 5% 0;
+}
+
+.hb1i-p p {
+    font-size: 1rem;
+    line-height: 200%;
+    margin-bottom: 2rem;
+}
+
+.hb1i-buttom {
+    margin: 1rem 0;
+}
+
+.hb1i-buttom a {
+    color: #404E64;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    border: 1px solid #404E64;
+    border-radius: 40px;
+}
+.hb1i-buttom a:hover{
+    color: #fff;
+    background-color: #404E64;
+}
+
+@media (width>=768px) {
+    .homepage-block1 {
+        flex-direction: row;
+    }
+
+    .hb1-img {
+        width: 50%;
+        margin: 0;
+    }
+
+    .hb1-img img {
+        height: 400px;
+        border-radius: 0 15px 15px 0;
+    }
+
+    .hb1-text {
+        width: 50%;
+        margin: 0 5%;
+        align-items: start;
+    }
+
+    .hb1i-p p {
+        margin: 0;
+    }
+
+    .hb1i-buttom {
+        align-self: end;
+        margin: 1rem 0;
+    }
+}
+
+/* 首頁第二區塊 */
+.homepage-block2{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* vertical-align: top; */
+}
+.hb2-img{
+    width: 100%;
+    height: 600px;
+}
+.hb2-mask{
+    width: 100%;
+    height: 600px;
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(64,78,100,1) 70%);
+    position: absolute;
+    z-index: 3;
+}
+@media (width>=768px) {
+    .hb2-mask{
+        background: linear-gradient(270deg, rgba(255,255,255,0) 0%, rgba(64,78,100,1) 60%);
+    }
+}
+.hb2-img img{
+    width: 100%;
+    height: 600px;
+    position: relative;
+    z-index: 2;
+    object-fit: cover;
+    object-position: right;
+}
+.hb2-content-board{
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    z-index: 100;
+}
+.hb2-items{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+.hb2c-title{
+    color: #fff;
+    font-size: 8vw;
+    margin: 30px;
+}
+.hb2c-buttom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.hb2c-buttom a{
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    width: 80%;
+    background-color: rgba(255,255,255,0.3) ;
+    border-radius: 100px;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+}
+.hb2c-buttom a span{
+    font-size: 3vw;
+}
+.hb2c-buttom a h2{
+    font-size: 4vw;
+}
+@media (width>=768px) {
+    .hb2-items{
+        justify-content: flex-start;
+    }
+    .hb2c-title{
+        font-size: 3rem;
+        margin: 60px;
+    }
+    .hb2c-buttom{
+        align-items: flex-start;
+    }
+    .hb2c-buttom a{
+        width: 400px;
+        padding: 2rem;
+        margin: 2rem;
+    }
+    .hb2c-buttom a span{
+        font-size: 1rem;
+    }
+    .hb2c-buttom a h2{
+        font-size: 1.5rem;
+    }
+}
+
+/* 首頁/第三區塊 */
+.homepage-block3{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hb3-img{
+    width: 100%;
+    height: 500px;
+}
+.hb3-mask{
+    width: 100%;
+    height: 500px;
+    background:rgba(64,78,100,0.5);
+    position: absolute;
+    z-index: 3;
+}
+.hb3-img img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+    position: relative;
+    z-index: 2;
+}
+.hb3-push{
+    width: 100%;
+    position: absolute;
+    z-index: 100;
+    display: flex;
+    justify-content: space-around;
+}
+.hb3-push a{
+    width: 80%;
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.hb3-push a h2{
+    font-size: 6vw;
+}
+.hb3-push a span{
+    font-size: 4vw;
+}
+.hb3-push a img{
+    width: 4%;
+    height: 25%;
+    margin: 1rem;
+}
+@media (width>=768px) {
+    .hb3-push a{
+        width: 624px;
+        justify-content: flex-start;
+    }
+    .hb3-push a h2{
+        font-size: 3rem;
+    }
+    .hb3-push a span{
+        font-size: 1.5rem;
+    }
+    .hb3-push a img{
+        width: 15px;
+        height: 30px;
+        margin: 2rem;
+    }
+}
+
+/* 首頁/消息區塊 */
+.homepage-newswrap{
+    width: 100%;
+}
+.hnw-content{
+    width: 90%;
+    margin: 0 auto;
+}
+.hnw-title{
+    width: 100%;
+    display: flex;
+    flex-direction:row;
+    align-items: flex-end;
+    margin:2rem 0 1rem 0;
+}
+.hnw-title h2{
+    font-size: 6vw;
+    margin-left: 2rem;
+}
+.hnw-title span{
+    font-size: 4vw;
+}
+.hnw-article{
+    display: block;
+    margin-bottom: 2rem;
+    width: 100%;
+    background-color: #f0f0f0;
+    border-radius: 30px;
+}
+.hnw-up{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hnw-article ul  {
+    width: 90%;
+    margin: 2rem;
+}
+.hnw-article ul li{
+    height: 100px;
+    margin-top: 1rem;
+    background: #fff;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+}
+.hnw-article ul li a{
+    text-decoration: none;
+    color: #000;
+    font-size: 3vw;
+    line-height: 150%;
+    padding: 1rem;
+}
+.hnw-article ul li a h3{
+    display: inline-block;
+    font-size: 4vw;
+}
+.hnw-spotlight{
+    width:90%;
+}
+.hnw-spotlight img{
+    width: 100%;
+    height: 350px;    border-radius: 15px;
+    object-fit: cover;
+    object-position: center;
+}
+.hnw-more{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.hnw-more a{
+    text-decoration: none;
+    color: #000;
+    font-size: 4vw;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+}
+.hnw-more a span{
+    margin-right: 10px;
+}
+
+@media (width>=768px) {
+    .hnw-title h2{
+        font-size: 2.5rem;
+        margin-left: 2rem;
+    }
+    .hnw-title span{
+        font-size: 1.5rem;
+    }
+    .hnw-up{
+        flex-direction: row;
+    }
+    .hnw-article ul{
+        width: 50%;
+    }
+    .hnw-article ul li a{
+        font-size: 1rem;
+    }
+    .hnw-article ul li a h3{
+        font-size: 1.3rem;
+    }
+    .hnw-spotlight{
+        width:50%;
+        margin: 2rem;
+        margin-left: 0;
+    }
+    .hnw-more a{
+        font-size: 1.5rem;
+    }
+}
+/* 共用頁尾 */
+.footer-container{
+    width: 100%;
+}
+.footer{
+    width: 100%;
+    background-color: #404E64;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer nav{
+    width: 100%;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer nav a{
+    text-decoration: none;
+    font-size: 1rem;
+    margin:1rem;
+    color: #fff;
+}
+.nav-border{
+    width: 60%;
+    padding: 1px;
+    margin-top: 1rem;
+    background-color: #fff;
+}
+@media (width>=768px) {
+    .footer nav{
+        margin: 2rem;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .footer nav a{
+        margin:0 1.5rem;
+    }
+    .nav-border{
+        display: none;
+    }
+}
+.footer-contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.fc-logo{
+    margin: 1rem;
+}
+.fc-logo a img{
+    width: 95%;
+}
+.fc-inforow{
+    margin: 1rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    order: -1;
+}
+@media (width>=768px) {
+    .footer-contact{
+        margin: 1rem;
+        flex-direction: row;
+    }
+    .fc-inforow{
+        margin: 0;
+        align-items: flex-start;
+        order: 1;
+    }
+    .fc-border{
+        width: 100%;
+        padding: 2px;
+        margin: 1rem 0;
+        background-color: #fff;
+    }
+}
+.fc-inforow h3{
+    font-size: 2.5rem;
+    margin-left: .8rem;
+}
+.fc-snsicon{
+    margin: .8rem;
+}
+.fc-snsicon a i{
+    color: #fff;
+    font-size: 2.5rem;
+    margin-right: .5rem;
+}
+.fc-inforow span{
+    font-size: 1rem;
+    margin:.5rem 1rem;
+}
+.copyright{
+    width: 100%;
+    color: #fff;
+    font-size: 3vw;
+    line-height: 150%;
+    display: flex;
+    margin: 2rem;
+    justify-content: center;
+    text-align: center;
+}
+@media (width>=768px) {
+    .copyright{
+        font-size: 1rem;
+    }
+}
