@@ -574,7 +574,7 @@ body{
                      .af-ul li{
                         padding: 10px 25px;
                         font-size: 20px;
-                     }
+                    }
                     #filter-switch:checked~ .af-ul{
                         display: block;
                     }
