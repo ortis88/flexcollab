@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>洽詢與預約 - Flex Collab</title>
     <link rel="icon" href="pic/其他/LOGO B 修改2.ico">
-    <link rel="stylesheet" href="CSS/FC.css">
-    <link rel="stylesheet" href="CSS/FC-RWD.css">
-    <link rel="stylesheet" href="CSS/FC-CSSReset.css">
+    <link rel="stylesheet" href="css/FC-RWD.css">
+    <link rel="stylesheet" href="css/FC-CSSReset.css">
     <script src="https://kit.fontawesome.com/d7194ab2e4.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,72 +17,89 @@
             font-family: 'Onest', sans-serif;
         }
     </style>
+
+    <script src="JavaScript/header_burger.js"></script>
 </head>
 <body>
-<div class="header-container">
 
-    <header>
-        <div class="header-items">
+<header>
+    <input type="checkbox" id="header-switch">
+    <div class="header-space">
+        <div class="header-content">
             <div class="header-image">
                 <a href="index.html">
-                    <img src="pic/header/logowithtext.png" width="270px" >
+                    <img src="../pic/header/logowithtext.png" width="270px" >
                 </a>
             </div>
+            <label for="header-switch" class="header-burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+            </label>
             <nav>
-            <a href="about.html">關於Flex Collab</a>
-            <a href="news.html">最新消息</a>
-            <a href="space_info.html">空間方案</a>
-            <a href="service_info.html">服務內容</a>
-            <a id="nav-buttom" href="bookingpage.html">洽詢/預約</a>
+                <a href="about.html">關於Flex Collab</a>
+                <a href="news.html">最新消息</a>
+                <a href="space_info.html">空間預覽</a>
+                <a href="service_info.html">服務內容</a>
+                <a id="nav-buttom" href="bookingpage.html">洽詢/預約</a>
             </nav>
         </div>
-    </header>
+    </div>
+    <div id="nav-menu" class="hidden">
+        <a href="about.html">關於Flex Collab</a>
+        <span></span>
+        <a href="news.html">最新消息</a>
+        <span></span>
+        <a href="space_info.html">空間預覽</a>
+        <span></span>
+        <a href="service_info.html">服務內容</a>
+        <span></span>
+        <a href="bookingpage.html">洽詢/預約</a>
+    </div>
+</header>
 
-</div>
+<div class=" normal-wrap">
 
-<div class="breadcrumb">
-
-    <div class="bc-items">
-        <ol>
-            <li class="bc-li"><a href="index.html">首頁</a></li>
-            <li class="bc-li"><a href="bookingpage.html">洽詢/預約</a></li>
-        </ol>
+    <div class="breadcrumb">
+        <div class="bc-items">
+            <ol>
+                <li class="bc-li"><a href="index.html">首頁</a></li>
+                <li class="bc-li"><a href="bookingpage.html">洽詢與預約</a></li>
+            </ol>
+        </div>
     </div>
 
-</div>
-
-<div class="wrap">
-
     <div class="bookingpage-block1">
-        <div class="bib1-title">
-            <h2>線上預約</h2>
-        </div>
+        <h2>線上預約</h2>
         <div class="bib1-dailyrent">
-            <div class="bib1d-items">
-                <div class="daily-plan">
-                    <h3>日租預約</h3>
-                    <span>預約保留30分鐘，若超過時間及取消預約保留</span>
-                </div>
-                <div class="daily-plan-btn">
-                    <button><h3>開放座位</h3>
-                        <span>300NTD/日</span></button>
-                    <button><h3>獨立座位</h3>
-                        <span>500NTD/日</span></button>
-                    <button><h3>會議室</h3>
-                        <span>500NTD/3小時時段</span></button>
-                </div> 
+            <div class="daily-plan">
+                <i class="fa-regular fa-clock"></i>
+                <h3>日租預約</h3>
+                <span>預約保留30分鐘，若超過時間及取消預約保留</span>
             </div>
+            <div class="daily-plan-btn">
+                <button>
+                    <h3>開放座位</h3>
+                    <span>300NTD/日</span>
+                </button>
+                <button>
+                    <h3>獨立座位</h3>
+                    <span>500NTD/日</span>
+                </button>
+                <button>
+                    <h3>會議室</h3>
+                    <span>500NTD/3小時時段</span>
+                </button>
+            </div> 
         </div>
     </div>
 
     <div class="bookingpage-block2">
         <div class="bib2-process">
-            <div class="bib2p-title">
-                <h2>空間月租流程</h2>
-            </div>
+            <h2>空間月租流程</h2>
             <div class="bib2p-row">
-
                 <div class="row-card">
+                    <i class="fa-solid fa-eye"></i>
                     <h3>Step.1<br>預約參觀</h3>
                     <ol>
                         <li>詳細需求確認</li>
@@ -91,13 +108,16 @@
                     </ol>
                 </div>
                 <div class="row-card">
+                    <i class="fa-solid fa-file-signature"></i>
                     <h3>Step.2<br>契約簽訂</h3>
                     <ol>
                         <li>契約確認</li>
                         <li>簽訂契約</li>
+                        <br>
                     </ol>
                 </div>
                 <div class="row-card">
+                    <i class="fa-solid fa-people-carry-box"></i>
                     <h3>Step.3<br>進駐手續</h3>
                     <ol>
                         <li>收取押金</li>
@@ -106,127 +126,119 @@
                     </ol>
                 </div>
                 <div class="row-card">
+                    <i class="fa-solid fa-circle-check"></i>
                     <h3>Step.4<br>開始使用</h3>
                     <ol>
                         <li>遞交鑰匙卡</li>
-                        <li>月戶確認</li>
+                        <li>用戶確認</li>
                         <li>聯絡管道確認</li>
                     </ol>
                 </div>
-
             </div>
         </div>
+
         <div class="bib2-menu">
             <div class="bib2m-row">
-                <div class="row-card">
-                    <h3>開放式座位</h3><br>
+                <div class="mrow-card">
+                    <i class="fa-solid fa-person-walking"></i>
+                    <h3>開放式座位</h3>
                     <span>4000NTD/月</span>
                 </div>
-                <div class="row-card">
-                    <h3>獨立式座位</h3><br>
+                <div class="mrow-card">
+                    <i class="fa-solid fa-user"></i>
+                    <h3>獨立式座位</h3>
                     <span>6000NTD/月</span>
                 </div>
-                <div class="row-card">
-                    <h3>個人空間</h3><br>
+                <div class="mrow-card">
+                    <i class="fa-solid fa-image-portrait"></i>
+                    <h3>個人空間</h3>
                     <span>10000NTD/月</span>
                 </div>
-                <div class="row-card">
-                    <h3>獨立小空間</h3><br>
+                <div class="mrow-card">
+                    <i class="fa-solid fa-person-shelter"></i>
+                    <h3>獨立小空間</h3>
                     <span>16000NTD/月</span>
                 </div>
-                <div class="row-card">
-                    <h3>獨立空間</h3><br>
+                <div class="mrow-card">
+                    <i class="fa-solid fa-users-rectangle"></i>
+                    <h3>獨立空間</h3>
                     <span>20000NTD/月</span>
+                </div>            
+                <div class="bib2-menu-btn">
+                    <h3>月租方案價格</h3>
+                    <button>立即預約參觀</button>
                 </div>
-            </div>
-
-            <div class="bib2-menu-btn">
-                <button><h3>立即預約參觀</h3></button>
             </div>
         </div>
     </div>
 
     <div class="bookingpage-block3">
-            <div class="bib3c-title">
-                <h2>諮詢管道</h2>
-            </div>
-            <div class="bib3c-context">
-                <div class="bib3c-connect">
-                    <div class="bib3c-con-number">
-                        <h3>客服專線<br></h3>
-                        <span>0800-123-123<br></span>
-                        <span class="CService-hours">
-                            (週一~週五 10:00~18:00)
-                        </span>
-                    </div>
-                    <div class="bib3c-con-email">
-                        <h3>客服信箱<br></h3>
-                        <span><a href="">flexcollab@gmail.com</a></span>
-                    </div>
+        <h2>諮詢管道</h2>
+        <div class="bib3c-context">
+            <div class="bib3c-connect">
+                <div class="bib3c-con-info">
+                    <i class="fa-solid fa-phone"></i>
+                    <h3>客服專線</h3>
+                    <span>0800-123-123<br></span>
+                    <span class="CService-hours">
+                        (週一~週五 10:00~18:00)
+                    </span>
                 </div>
-                <div class="bib3c-form">
-                    <input type="text" id="c-name" placeholder="您的稱呼">
-                    <input type="email" id="cmail-contact" placeholder="聯絡方式/信箱">
-                    <br>
-                    <input type="text" id="cmail-article" placeholder="標題">
-                    <br>
-                    <textarea id="cmail-content" placeholder="諮詢內容"></textarea>
-
-                    <input type="submit" id="c-sumit">
-                    </input>
-
+                <div class="bib3c-con-info">
+                    <i class="fa-solid fa-envelope"></i>
+                    <h3>客服信箱</h3>
+                    <a href="">flexcollab@gmail.com</a>
                 </div>
             </div>
+            <div class="bib3c-form">
+                <input type="text" id="c-name" placeholder="您的稱呼">
+                <br>
+                <input type="email" id="cmail-contact" placeholder="聯絡方式/信箱">
+                <br>
+                <input type="text" id="cmail-article" placeholder="標題">
+                <br>
+                <textarea id="cmail-content" placeholder="諮詢內容"></textarea>
+                <input type="submit" id="c-sumit">
+                </input>
+            </div>
+        </div>
     </div>
 
 </div>
 
-    <div class="footer">
-        <div class="footer-items">
-            <div class="footer-nav">
-                <div class="fn-select">
-                    <a href="about.html">關於Flex Collab</a>
-                    <a href="news.html">最新消息</a>
-                    <a href="space_info.html">空間方案</a>
-                    <a href="service_info.html">服務內容</a>
-                    <a href="bookingpage.html">洽詢/預約</a>
-                </div>
-            </div>
-            <div class="footer-contact">
-                <div class="fc-logo">
-                     <a href="index.html">
-                         <img src="pic/footer/LOGOgray.png" alt="Footer的logo">
-                     </a>
-                </div>
-                <div class="fc-inforow">
-                    <div class="fc-info">
-                        <div class="fc-title">
-                            <span>Contact</span>
-                        </div>
-                        <div class="fc-snsicon">
-                            <a href=""><i class="fa-brands fa-instagram" ></i></a>
-                            <a href=""><i class="fa-brands fa-square-facebook"></i></a>
-                        </div>
-                        <div class="fc-text">
-                            <span>TEL：(02)-1234-5678<br></span>
-                        </div>
-                        <div class="fc-text">
-                            <span>EMAIL：flexcollab@gmail.com<br></span>
-                        </div>
-                        <div class="fc-text">
-                            <span>104台北市中山區南京東路三段219號5樓</span>
-                        </div>
-                        <div class="fc-border"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright">
-                <span>本網站為緯育TibaMe前端班 CDH104 學員專題作品，本平台僅供學習、展示之用。</span>
-            </div>
+<footer>
+    <nav>
+        <a href="about.html">關於Flex Collab</a>
+        <a href="news.html">最新消息</a>
+        <a href="space_info.html">空間方案</a>
+        <a href="service_info.html">服務內容</a>
+        <a href="bookingpage.html">洽詢/預約</a>
+        <div class="nav-border"></div>
+    </nav>
+    <div class="footer-contact">
+        <div class="fc-logo">
+            <a href="index.html">
+                <img src="../pic/footer/LOGOgray.png" alt="Footer的logo">
+            </a>
         </div>
-     </div>
+        <div class="fc-inforow">
+            <h3>Contact</h3>
+            <div class="fc-snsicon">
+                <a href=""><i class="fa-brands fa-instagram" ></i></a>
+                <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+            </div>
+            <span>TEL：(02)-1234-5678<br></span>
+            <span>EMAIL：flexcollab@gmail.com<br></span>
+            <span>104台北市中山區南京東路三段219號5樓</span>
+            <div class="fc-border"></div>
+        </div>
+        
+    </div>
+    <div class="copyright">
+        <span>本網站為緯育TibaMe前端班 CDH104 學員專題作品，<br>本平台僅供學習、展示之用。</span>
+    </div>
+</footer>
 
 
-</div>
 </body>
 </html>
