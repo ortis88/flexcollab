@@ -32,7 +32,6 @@ header {
     flex-direction: row;
     justify-content: space-between;
 }
-
 .header-image {
     width: 30%;
 }
@@ -41,7 +40,6 @@ header {
     width: 150%;
     margin: .5rem 0 0 0;
 }
-
 @media (width>=768px) {
     .header-image img {
         width: 60%;
@@ -64,12 +62,22 @@ header {
     }
 }
 
-.header-burger span {
+.line {
     width: 80%;
     height: 2px;
     margin: 3px;
     background-color: #000;
 }
+.line:nth-child(1){
+    transform-origin: 0% 0%;
+}
+.line:nth-child(2){
+    transform-origin: 100% 0%;
+}
+.line:nth-child(3){
+    transform-origin: 0% 100%;
+}
+
 
 .header-content nav {
     display: none;
@@ -98,14 +106,17 @@ header {
 #nav-buttom {
     background-color: #404E64;
     color: #fff;
+    border: 1px solid #404E64;
     padding: .5rem 1rem;
     border-radius: 15px;
+    transition: 300ms;
 }
 
 #nav-buttom:hover{
     text-decoration: none;
     background-color: #f0f0f0;
     color: #000;
+    transition: 300ms;
 }
 
 /* 共用/頁首/手機版導行列 */
@@ -114,15 +125,14 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: .5rem auto;
-    background-color: #404E64;
+    margin: 0 auto;
+    background-color: #fff;
     opacity: 0.9;
-    border-radius: 15px;
-    transition: 1000;
 }
 
 #nav-menu.hidden {
-    display: none;
+    position: relative;
+    right: -1000px;
 }
 
 @media (width>=768px) {
@@ -134,7 +144,8 @@ header {
 #nav-menu a {
     text-decoration: none;
     display: block;
-    color: #fff;
+    background-color: none;
+    color: #000;
     font-size: 1rem;
     padding: 2rem;
 }
@@ -146,7 +157,7 @@ header {
 #nav-menu span {
     width: 80%;
     height: 1px;
-    background-color: #fff;
+    background-color: #000;
 }
 
 /* 共用/內容寬度限制 */
@@ -548,7 +559,7 @@ header {
     justify-content: center;
 }
 .hb3-push a h2{
-    font-size: 6vw;
+    font-size: 5.5vw;
 }
 .hb3-push a span{
     font-size: 4vw;
@@ -1553,7 +1564,7 @@ header {
 }
 .serviceinfo-block3 ol{
     text-align: center;
-    font-size: 4vw;
+    font-size: 3.5vw;
     line-height: 200%;
     padding: 0 1rem;
     margin-bottom: 2rem;

@@ -7,5 +7,11 @@ window.addEventListener("load", function() {
             menu.classList.add("hidden");
         }
         };	
+    
+        document.getElementById("header-switch").addEventListener('click', function() {
+            this.classList.toggle('is-active');
+          });
+          
+
 }, false);
 
