@@ -17,13 +17,56 @@ header {
     display: none;
 }
 
-.header-space {
+#header-space {
     width: 90%;
     margin: auto;
     background-color: rgba(255,255,255,0.9);
     border-radius: 0 0 15px 15px;
     box-shadow: 0 3px 6px #404E64;
+    position: relative;
+    top:0;
+    transition: top 0.3s;
 }
+
+#header-space.hidden {
+    top: -405px;
+}
+
+/* 共用/頁首/手機版導行列 */
+.nav-menu {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+@media (width>=768px) {
+    .nav-menu {
+        display: none;
+    }
+}
+.nav-menu a {
+    text-decoration: none;
+    display: block;
+    background-color: none;
+    color: #000;
+    font-size: 1rem;
+    padding: 2rem;
+}
+
+.nav-menu a:hover {
+    text-decoration: underline;
+}
+
+.nav-menu span {
+    width: 80%;
+    height: 1px;
+    background-color: #000;
+}
+/*  */
 
 .header-content {
     width: 90%;
@@ -68,16 +111,6 @@ header {
     margin: 3px;
     background-color: #000;
 }
-.line:nth-child(1){
-    transform-origin: 0% 0%;
-}
-.line:nth-child(2){
-    transform-origin: 100% 0%;
-}
-.line:nth-child(3){
-    transform-origin: 0% 100%;
-}
-
 
 .header-content nav {
     display: none;
@@ -119,46 +152,6 @@ header {
     transition: 300ms;
 }
 
-/* 共用/頁首/手機版導行列 */
-#nav-menu {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    background-color: #fff;
-    opacity: 0.9;
-}
-
-#nav-menu.hidden {
-    position: relative;
-    right: -1000px;
-}
-
-@media (width>=768px) {
-    #nav-menu {
-        display: none;
-    }
-}
-
-#nav-menu a {
-    text-decoration: none;
-    display: block;
-    background-color: none;
-    color: #000;
-    font-size: 1rem;
-    padding: 2rem;
-}
-
-#nav-menu a:hover {
-    text-decoration: underline;
-}
-
-#nav-menu span {
-    width: 80%;
-    height: 1px;
-    background-color: #000;
-}
 
 /* 共用/內容寬度限制 */
 .homepage-wrap {
