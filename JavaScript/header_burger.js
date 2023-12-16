@@ -6,7 +6,14 @@ window.addEventListener("load", function() {
         } else {
             menu.classList.add("hidden");
         }
-        };	      
 
+        let hambuger = document.querySelector(".header-burger");
+        if(hambuger.classList.contains("turn-active")){
+            hambuger.classList.remove("turn-active");
+        } else {
+            hambuger.classList.add("turn-active");
+        }
+
+        };
 }, false);
 

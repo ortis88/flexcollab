@@ -31,6 +31,11 @@ header {
 #header-space.hidden {
     top: -405px;
 }
+@media (width>=768px) {
+    #header-space.hidden {
+        top: 0;
+    }
+}
 
 /* 共用/頁首/手機版導行列 */
 .nav-menu {
@@ -105,12 +110,21 @@ header {
     }
 }
 
+
 .line {
     width: 80%;
     height: 2px;
     margin: 3px;
     background-color: #000;
+    transition: 0.6s;
 }
+.header-burger.turn-active .line:nth-child(1){
+    transform: scale(0.5 ,1);
+}
+.header-burger.turn-active .line:nth-child(3){
+    transform: translateY(-8px);
+}
+
 
 .header-content nav {
     display: none;
