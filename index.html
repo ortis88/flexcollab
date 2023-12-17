@@ -19,6 +19,26 @@
     </style>
 
     <script src="JavaScript/header_burger.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="JavaScript/bannner-carousel.js"></script>
+    <style>
+        .sliding-img {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: none;
+        }
+
+        .sliding-img img{
+            width: 100%;
+            height: 700px;
+            object-fit: cover;
+            object-position: center center;
+        }
+    </style>
 
 </head>
 <body>
@@ -70,7 +90,20 @@
 
     <div class="banner">
         <div class="banner-mask"></div>
-        <img src="pic/homepage/homepage-banner.jpg" alt="Banner-pic">
+        <div class="bs-carousel">
+            <div class="sliding-img">
+                <img src="pic/homepage/homepage-banner.jpg" alt="">
+            </div>
+            <div class="sliding-img">
+                <img src="pic/homepage/homepage-banner-img2.jpg" alt="">
+            </div>
+            <div class="sliding-img">
+                <img src="pic/homepage/homepage-banner-img3.jpg" alt="">
+            </div>
+            <div class="sliding-img">
+                <img src="pic/homepage/homepage-banner-img4.jpg" alt="">
+            </div>
+        </div>
     </div>
     <div class="banner-text">
         <div class="bat-content">
@@ -82,7 +115,6 @@
         </div>
     </div> 
 
-    <script async src="//www.youtube.com/iframe_api"></script>
 
     <!-- 第一區塊 -->
 
