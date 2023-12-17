@@ -20,7 +20,23 @@
 
     <script src="JavaScript/header_burger.js"></script>
 
+    <script src="JavaScript/checkbox-filter.js"></script>
+    <style>
+        .nl-hidden {
+            display: none;
+         }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="JavaScript/fadin-area.js"></script>
+    <style>
+        .fadinarea{
+            width: 100%;
+        }
+    </style>
+
 </head>
+
 <body>
 
 <header>
@@ -80,13 +96,13 @@
             <div class="nf-buttom">
                 <input type="checkbox" id="filter-switch">
                 <label for="filter-switch" id="art-filter">
-                <span>篩選</span>
-                <img src="pic/news/news-filterbuttom-ar.png" alt="">
+                    <span>篩選</span>
+                    <img src="pic/news/news-filterbuttom-ar.png" alt="">
                 </label>
                 <ul class="af-ul">
-                    <li><input type= "checkbox"><p>近期活動</p></li>
-                    <li><input type= "checkbox"><p>優惠訊息</p></li>
-                    <li><input type= "checkbox"><p>公告啟示</p></li>
+                    <label><input type= "checkbox" id="box1"><p>近期活動</p></label>
+                    <label><input type= "checkbox" id="box2"><p>優惠訊息</p></label>
+                    <label><input type= "checkbox" id="box3"><p>公告啟示</p></label>
                 </ul>
             </div>
 
@@ -105,9 +121,10 @@
         </div>
     </div>
 
+<div class="fadinarea">
     <div class="news-list">
         <ol>
-            <li>
+            <li class="nl-item" id="news04">
                 <div class="news-block">
                     <a href="newspage.html" class="nb-img"><img src="pic/news/news-block1-pic.png" alt=""></a>
                     <div class="ns-text">
@@ -117,7 +134,7 @@
                     </div>
                 </div>
             </li>
-            <li>
+            <li class="nl-item" id="news03">
                 <div class="news-block">
                     <a href="newspage.html" class="nb-img"><img src="pic/news/news-block2-pic.png" alt=""></a>
                     <div class="ns-text">
@@ -127,7 +144,7 @@
                     </div>
                 </div>
             </li>
-            <li>
+            <li class="nl-item" id="news02">
                 <div class="news-block">
                     <a href="newspage.html" class="nb-img"><img src="pic/news/news-block3-pic.png" alt=""></a>
                     <div class="ns-text">
@@ -137,7 +154,7 @@
                     </div>
                 </div>
             </li>
-            <li>
+            <li class="nl-item" id="news01">
                 <div class="news-block">
                         <a href="newspage.html" class="nb-img"><img src="pic/news/news-block4-pic.png" alt=""></a>
                     <div class="ns-text">
@@ -149,7 +166,9 @@
             </li>
         </ol>
     </div>
-
+</div>
+    
+<div class="fadinarea">
     <div class="ns-numrow">
         <ul>
             <li><a href=""></a></li>
@@ -159,10 +178,13 @@
             <li><a href=""><img src="pic/news/news-numrow-ar-right.png" alt=""></a></li>
         </ul>
     </div>
+</div>
+    
 
 </div>
 
-<footer>
+<div class="fadinarea">
+    <footer>
     <nav>
         <a href="about.html">關於Flex Collab</a>
         <a href="news.html">最新消息</a>
@@ -194,6 +216,8 @@
         <span>本網站為緯育TibaMe前端班 CDH104 學員專題作品，<br>本平台僅供學習、展示之用。</span>
     </div>
 </footer>
+</div>
+
 
 </body>
 </html>
