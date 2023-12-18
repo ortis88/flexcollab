@@ -38,7 +38,7 @@ $(document).ready(function() {
 
         // 如果區域在範圍內，開始跑動畫顯示
         if ((areaStart >= visibleStart && areaStart <= visibleEnd) || (areaEnd >= visibleStart && areaEnd <= visibleEnd)) {
-          $(this).delay(100 * index).animate({
+          $(this).delay(80 * index).animate({
             opacity: 1,
             transform: 'translateY(0)'
           }, 600); // 動畫時間為 0.6 秒

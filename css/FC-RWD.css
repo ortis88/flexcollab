@@ -1027,7 +1027,11 @@ header {
 .news-list ol .nl-item{
     margin-bottom: 2rem;
     background-color: #f0f0f0;
+    border: 2px solid #f0f0f0;
     border-radius: 15px;
+}
+.news-list ol .nl-item:hover{
+    border: 2px solid #404E64;
 }
 .news-block{
     width: 90%;

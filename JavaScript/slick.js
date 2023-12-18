@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('.items-row').slick({
+    $('.items-row1').slick({
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
