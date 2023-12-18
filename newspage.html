@@ -20,6 +20,14 @@
 
     <script src="JavaScript/header_burger.js"></script>
 
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="JavaScript/fadin-area.js"></script>
+    <style>
+        .fadinarea{
+            width: 100%;
+        }
+    </style>
+
 </head>
 <body>
 
@@ -81,7 +89,8 @@
             <span>回列表</span>
         </a>
     </div>
-    
+
+<div class="fadinarea">
     <div class="newspage-content">
 
         <div class="newspage-article">
@@ -146,17 +155,22 @@
             </ul>
         </div>
     </div>
-
+</div>
+    
+<div class="fadinarea">
     <div class="np-nextarticle">
         <a href="newspage.html">
             <span>下一則</span>
             <img src="pic/newspage/newspage-nextarticle-ar-right.png" alt="">
         </a>
     </div>
+</div>
+    
 
 </div>
 
-<footer>
+<div class="fadinarea">
+    <footer>
     <nav>
         <a href="about.html">關於Flex Collab</a>
         <a href="news.html">最新消息</a>
@@ -188,6 +202,8 @@
         <span>本網站為緯育TibaMe前端班 CDH104 學員專題作品，<br>本平台僅供學習、展示之用。</span>
     </div>
 </footer>
+</div>
+
 
 
 </body>
