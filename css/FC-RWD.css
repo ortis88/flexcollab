@@ -1249,29 +1249,70 @@ header {
 #preview-wrap{
     position: fixed;
     width: 100%;
-    height: 100%;
+    height: 120vh;
     background-color: rgba(0, 0, 0, .5);
-    z-index: 9999999;
+    z-index: 999999;
+}
+
+.close-btn{
+    position: absolute;
+    right: 10px;
+    top:10px;
+}
+.close-btn i{
+    color: #f0f0f0;
+    font-size: 2rem;
+    cursor: pointer;
 }
 .pic-lightbox{
     width: 100%;
     height: 100%;
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
 }
 
 .img-view{
-    width: 500px;
-    height: 500px;
-    margin: auto;
-}
-.item{
+    margin-top: 30%;
     width: 100%;
+}
+@media (width>=768px) {
+    #preview-wrap{
+        height: 100%;
+    }
+    .pic-lightbox{
+        align-items: center;
+        justify-content: center;
+    }
+    .img-view{
+        margin:0;
+        width: 50%;
+    }
 }
 .item img{
     width: 100%;
-    height: 500px;
+    height: 50vh;
+    object-fit: cover;
+    object-position: center;
+}
+@media (width>=768px) {
+    #preview-wrap{
+        height: 100%;
+    }
+    .pic-lightbox{
+        align-items: center;
+        justify-content: center;
+    }
+    .img-view{
+        margin:0;
+        width: 50%;
+    }
+    .item img{
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        object-position: center;
+    }
 }
 
 
@@ -1310,6 +1351,7 @@ header {
 .sibc-box{
     margin: 2rem;
     background-color: #f0f0f0;
+    border-radius: 15px;
     text-align: center;
     font-size: 1rem;
     padding-bottom: 1rem;
@@ -1321,6 +1363,8 @@ header {
 }
 .sibc-box a img{
     width: 100%;
+    border-radius: 15px 15px 0 0;
+    cursor: pointer;
 }
 .sibc-box h3{
     font-size: 1.5rem;
@@ -1345,7 +1389,15 @@ header {
     border-radius: 2rem;
     padding: 1rem 2rem;
     margin:1rem;
+    transition: .3s;
 }
+.sib-btn-row a:hover{
+    background-color: #404E64;
+    color: #fff;
+    border:1px solid ;
+    transition: .3s;
+}
+
 @media (width>=768px) {
     .sib-btn-row{
         width: 100%;
@@ -1357,7 +1409,7 @@ header {
 }
 .empty-space{
     width: 100%;
-    height: 30px;
+    height: 20px;
     background-color: #f0f0f0;
 }
 
@@ -1680,23 +1732,28 @@ header {
     flex-direction: column;
     margin: 0 1rem;
 }
-.daily-plan-btn button{
+.daily-plan-btn a{
     width: 100%;
     height: 80px;
     font-size: 1rem;
+    text-decoration: none;
     color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     border: 1px solid #000;
     border-radius: 42px;
-    background-color: #fff;
+    background-color: rgba(255,255,255,0.5);
     margin-bottom: 1rem;
 }
-.daily-plan-btn button:hover{
+.daily-plan-btn a:hover{
     color: #fff;
     background-color: #404E64;
     transition: 0.3s;
     cursor: pointer;
 }
-.daily-plan-btn button h3{
+.daily-plan-btn a h3{
     font-size: 1.5rem;
 }
 @media (width>=768px) {
@@ -1834,21 +1891,36 @@ header {
     font-size: 2rem;
     margin: 1rem 0;
 }
-.bib2-menu-btn button{
+@media (width>=500px){
+    .bib2-menu-btn h3{
+        font-size: 5vw;
+    }
+}
+@media (width>=768px){
+    .bib2-menu-btn h3{
+        font-size: 2rem;
+    }
+}
+.bib2-menu-btn a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 80%;
     max-width: 200px;
     margin: auto;
     height: 40px;
-    background-color: #404E64;
-    color: #fff;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
     border: 1px solid #000;
     border-radius: 20px;
     font-size: 1rem;
     transition: .3s;
 }
-.bib2-menu-btn button:hover{
-    background-color: #fff;
-    color: #000;
+.bib2-menu-btn a:hover{
+    background-color: #404E64;
+    color: #fff;
+    border: 1px solid #404E64;
     cursor: pointer;
     transition: .3s;
 }
@@ -1926,10 +1998,18 @@ header {
     width: 150px;
     height: 40px;
     background-color: #404E64;
-    border-radius: 15px;
+    border-radius: 30px;
+    border: 1px solid #404E64;
     font-size: 1rem;
     color: #fff;
     cursor: pointer;
+    transition: .3s;
+}
+#c-sumit:hover{
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+    transition: .3s;
 }
 @media (width>=768px) {
     .bib3c-context{

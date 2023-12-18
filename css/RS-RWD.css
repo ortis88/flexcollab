@@ -1,0 +1,165 @@
+.rs-wrap{
+    max-width: 1920px;
+    width: 100%;
+}
+
+.rs-wrap-bgc{
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    max-width: 1920px;
+    width: 100%;
+}
+.rs-wrap-bgc img{
+    opacity: 0.3;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+}
+
+.rs-container{
+    width:90%;
+    margin: 2rem auto;
+    border: 2px solid #404E64;
+    background-color: rgba(255, 255, 255,0.8);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.rs-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+}
+.rs-title img{
+    width: 30%;
+}
+.rs-title h2{
+    text-align: center;
+    font-size: 6vw;
+    line-height: 150%;
+}
+
+.rs-notice{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.rs-notice h3{
+    font-size: 4.5vw;
+    margin: .5rem;
+}
+.rsn-list{
+    width: 80%;
+}
+.rsn-list ol{
+    position: relative;
+    left: 20px;
+}
+
+.rsn-list ol li{
+    list-style: decimal;
+    font-size: 3.5vw;
+    line-height: 200%;
+}
+
+.rs-select{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 5vw;
+    margin: .5rem;
+}
+
+.rs-select select{
+    font-size: 4.5vw;
+    margin: .5rem;
+}
+.rs-select{
+    margin-bottom: 2rem;
+}
+
+.rs-nextstep p{
+    font-size: 4vw;
+}
+
+.rsn-btnrow{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem auto;
+}
+
+.rsn-btnrow a{
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: .5rem 1rem;
+    margin: .5rem;
+    border: 1px solid #000;
+    border-radius: 30px;
+    background-color: #fff;
+    color: #000;
+    order: 1;
+}
+.rsn-btnrow input{
+    width: 125px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: .2rem 1rem;
+    margin: .5rem;
+    border: 1px solid #404E64;
+    border-radius: 30px;
+    background-color: #404E64;
+    color: #fff;
+    cursor: pointer;
+}
+@media (width>=768px) {
+    .rs-container{
+        width:60%;
+    }
+    .rs-title h2{
+        font-size: 2rem;
+    }
+    .rs-notice h3{
+        font-size: 1.5rem;
+    }
+    .rsn-list{
+        width: 70%;
+    }
+    .rsn-list ol li{
+        list-style: decimal;
+        font-size: 1rem;
+        line-height: 200%;
+    }
+    .rs-select{
+        flex-direction: row;
+        font-size: 1.5rem;
+    }
+    .rs-select select{
+        font-size: 1.5rem;
+        margin: .5rem;
+    }
+    .rs-nextstep p{
+        font-size: 1rem;
+    }
+    .rsn-btnrow{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        justify-content: space-between;
+        margin: 1rem auto 3rem auto;
+    }
+    .rsn-btnrow a{
+        order: -1;
+    }
+}

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>空間預覽 - Flex Collab</title>
     <link rel="icon" href="pic/其他/LOGO B 修改2.ico">
-    <link rel="stylesheet" href="css/FC-RWD.css">
+
     <link rel="stylesheet" href="css/FC-CSSReset.css">
     <script src="https://kit.fontawesome.com/d7194ab2e4.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,15 +21,12 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <style>
-    .slick-prev:before, .slick-next:before{
-        font-size: 70px;
-    }
-    .slick-prev{
-        left:-85px;
-    }
-    .slick-next{
-        right: -35px;
-    }
+        .slick-prev:before, .slick-next:before{
+            font-size: 70px;
+        }
+        .slick-prev{
+            left: -75px;
+        }
     </style>
 
     <script src="JavaScript/header_burger.js"></script>
@@ -44,26 +41,30 @@
 
     <script src="JavaScript/Image_lightbox.js"></script>
 
+    <link rel="stylesheet" href="css/FC-RWD.css">
+
 </head>
 <body>
 
 <div id="preview-wrap" style="display: none;">
+        <div class="close-btn" id="close-lightbox">
+            <i class="fa-regular fa-circle-xmark"></i>
+        </div>
     <div class="pic-lightbox">
         <div class="img-view">
-            <div class="items-row1">
+
+            <div id="items-row1">
                 <div class="item">
-                    <img src="pic/space info/block1A-img1.jpg" alt="">
+                    <img src="pic/space info/space infoblock1A-img1.jpg" alt="1-A塊圖1">
                 </div>
                 <div class="item">
-                    <img src="pic/space info/block1A-img1.jpg" alt="">
+                    <img src="pic/space info/space infoblock1A-img2.jpg" alt="1-A塊圖2">
                 </div>
                 <div class="item">
-                    <img src="pic/space info/block1A-img1.jpg" alt="">
-                </div>
-                <div class="item">
-                    <img src="pic/space info/block1A-img1.jpg" alt="">
+                    <img src="pic/space info/space infoblock1A-img3.jpg" alt="1-A塊圖3">
                 </div>
             </div>
+
         </div>
     </div>
 </div>
@@ -128,26 +129,26 @@
     </div>
 
 <div class="fadinarea">
-    <div class="spaceinfo-block1">
+    <div class="spaceinfo-block1" id="sib1">
         <h2 id="person-plan">個人空間</h2>
         <div class="sib-content">
             <div class="sibc-box">
                 <a id="open-preview1">
-                    <img src="pic/space info/spaceinfo-block1-A.png" alt="">
+                    <img src="pic/space info/spaceinfo-block1-A.png" alt="1-A塊">
                 </a>
                 <h3>開放座位 日/月</h3>
                 <span>Wifi/插座</span>
             </div>
             <div class="sibc-box">
-                <a href="">
-                    <img src="pic/space info/spaceinfo-block1-B.png" alt="">
+                <a id="open-preview2">
+                    <img src="pic/space info/spaceinfo-block1-B.png" alt="1-B塊">
                 </a>
                 <h3>獨立座位 日/月</h3>
                 <span>Wifi/插座</span>
             </div>
             <div class="sibc-box">
-                <a href="">
-                    <img src="pic/space info/spaceinfo-block1-C.png" alt="">
+                <a id="open-preview3">
+                    <img src="pic/space info/spaceinfo-block1-C.png" alt="1-C塊">
                 </a>
                 <h3>個人空間</h3>
                 <span>獨立隔音間/螢幕/個人置物櫃</span>
@@ -161,25 +162,25 @@
 </div>
     
 <div class="fadinarea">
-    <div class="spaceinfo-block2">
+    <div class="spaceinfo-block2" id="sib2">
         <h2 id="group-plan">團體空間</h2>
         <div class="sib-content">
             <div class="sibc-box">
-                <a href="">
+                <a id="open-preview4">
                     <img src="pic/space info/spaceinfo-block2-A.png" alt="">
                 </a>
                 <h3>獨立小空間2~3人</h3>
                 <span>獨立隔音間/專屬置物櫃</span>
             </div>
             <div class="sibc-box">
-                <a href="">
+                <a id="open-preview5">
                     <img src="pic/space info/spaceinfo-block2-B.png" alt="">
                 </a>
                 <h3>獨立空間4~6人</h3>
                 <span>獨立隔音間/專屬置物櫃</span>
             </div>
             <div class="sibc-box">
-                <a href="">
+                <a id="open-preview6">
                     <img src="pic/space info/spaceinfo-block2-C.png" alt="">
                 </a>
                 <h3>會議室/3小時時段</h3>
