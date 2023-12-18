@@ -287,12 +287,9 @@ header {
     width: 30px;
     height: 15px;
     margin: .5rem;
-    transition: .5s;
-}
-
-.bat-content a:hover img{
     animation: slide-down 1.5s infinite;
 }
+
 @keyframes slide-down {
     0%{
         opacity: 0;
@@ -1079,7 +1076,7 @@ header {
     align-items: center;
     justify-content: center;
 }
-.ns-numrow ul li:nth-child(3){
+.ns-numrow ul li:nth-child(2){
     background-color: #f0f0f0;
     border-radius: 15px;
 }
@@ -1477,7 +1474,14 @@ header {
     background-color: #f0f0f0;
     border-radius: 30px;
     padding: .5rem 1rem;
+    transition: .3s;
 }
+.gb-text-reserve a:hover{
+    color: #fff;
+    background-color: #404E64;
+    transition: .3s;
+}
+
 /*  */
 .serib1c-gb-textstr{
     width: 100%;
@@ -1513,6 +1517,12 @@ header {
     background-color: #f0f0f0;
     border-radius: 30px;
     padding: .5rem 1rem;
+    transition: .3s;
+}
+.gb-textstr-reserve a:hover{
+    color: #fff;
+    background-color: #404E64;
+    transition: .3s;
 }
 
 @media (width>=768px) {
@@ -1830,11 +1840,13 @@ header {
     border: 1px solid #000;
     border-radius: 20px;
     font-size: 1rem;
+    transition: .3s;
 }
 .bib2-menu-btn button:hover{
     background-color: #fff;
     color: #000;
     cursor: pointer;
+    transition: .3s;
 }
 
 /* 洽詢與預約/第三區塊 */
@@ -1900,6 +1912,9 @@ header {
     border: none;
     margin: .5rem;
     resize: none
+}
+#cmail-content::placeholder{
+    font-size: 1rem;
 }
 #c-sumit{
     display: block;
