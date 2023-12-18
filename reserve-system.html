@@ -18,6 +18,8 @@
         }
     </style>
 
+    <script src="JavaScript/reserve-system.js"></script>
+
 </head>
 <body>
 
@@ -28,40 +30,53 @@
     </div>
 
     <div class="rs-container">
-        <div class="rs-title">
-            <img src="pic/about/about-logo.png" alt="預約系統logo">
-            <h2>
-                Flex Collab<br>
-                共享工作空間預約系統
-            </h2>
-        </div>
-        <div class="rs-notice">
-            <h3>預約注意事項：</h3>
-            <div class="rsn-list">
-                <ol>
-                    <li>本系統僅針對「開放座位」、「獨立座位」、「會議室」、「月租參觀」提供預約服務</li>
-                    <li>一次預約僅限定預約單一時段。</li>
-                    <li>預約保留30分鐘，若超過時間及取消預約保留。</li>
-                    <li>本系統如有何爭議，本公司保有最終解釋權。</li>
-                </ol>
+
+        <div class="rsc-1" id="step1">
+            <div class="rs-title">
+                <img src="pic/about/about-logo.png" alt="預約系統logo">
+                <h2>
+                    Flex Collab<br>
+                    共享工作空間預約系統
+                </h2>
             </div>
-        </div>
-        <div class="rs-select">
-            <label for="plan-select">您選擇預約的方案為：</label>
-            <select name="plans" id="plan-select">
-                <option value="open-space">開放座位</option>
-                <option value="personal-sapce">獨立座位</option>
-                <option value="meeting-room">會議室</option>
-                <option value="m-rental-visit">月租參觀</option>
-            </select>
-        </div>
-        <div class="rs-nextstep">
-            <p>請確認您選擇的方案，確認後請點選下一步。</p>
-            <div class="rsn-btnrow">
-                <a href="bookingpage.html">回上一頁</a>
-                <input type="submit" value="下一頁"></input>
+            <div class="announce">
+                <p>本系統尚未啟用，敬請見諒！</p>
             </div>
+            <div class="rs-notice">
+                <h3>預約注意事項：</h3>
+                <div class="rsn-list">
+                    <ol>
+                        <li>本系統僅針對「開放座位」、「獨立座位」、「會議室」、「月租參觀」提供預約服務</li>
+                        <li>一次預約僅限定預約單一時段。</li>
+                        <li>預約保留30分鐘，若超過時間及取消預約保留。</li>
+                        <li>本系統如有何爭議，本公司保有最終解釋權。</li>
+                    </ol>
+                </div>
+            </div>
+            <form id="check-plan">
+                <div class="rs-select">
+                    <label for="plan-select">您選擇預約的方案為：</label>
+                    <select name="plans" id="plan-select">
+                        <option value="open-space">開放座位</option>
+                        <option value="personal-sapce">獨立座位</option>
+                        <option value="meeting-room">會議室</option>
+                        <option value="m-rental-visit">月租參觀</option>
+                    </select>
+                </div>
+                <div class="rs-nextstep">
+                    <p>請確認您選擇的方案，確認後請點選下一步。</p>
+                    <div class="rsn-btnrow">
+                        <a href="bookingpage.html">回上一頁</a>
+                        <input type="submit" value="下一頁"></input>
+                    </div>
+                </div>
+            </form>
         </div>
+       
+        <div class="rsc-2" id="step2">
+            <p id="selected-plan"></p>
+        </div>
+
     </div>
 </div>
 

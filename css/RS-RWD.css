@@ -43,7 +43,14 @@
     font-size: 6vw;
     line-height: 150%;
 }
-
+.announce{
+    width: 100%;
+}
+.announce p{
+    text-align: center;
+    color: #f00;
+    margin-bottom: 2rem;
+}
 .rs-notice{
     display: flex;
     flex-direction: column;
@@ -116,11 +123,11 @@
     font-size: 1.5rem;
     padding: .2rem 1rem;
     margin: .5rem;
-    border: 1px solid #404E64;
+    border: 1px solid #ccc;
     border-radius: 30px;
-    background-color: #404E64;
+    background-color: #ccc;
     color: #fff;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 @media (width>=768px) {
     .rs-container{
@@ -162,4 +169,16 @@
     .rsn-btnrow a{
         order: -1;
     }
+}
+
+#check-plan{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+#step2{
+    display: none;
 }
