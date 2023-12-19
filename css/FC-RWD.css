@@ -725,6 +725,12 @@ header {
 .hnw-more a span{
     margin-right: 10px;
 }
+.hnw-more a span{
+    position: relative;
+}
+.hnw-more a:hover img{
+    animation: slide-right 1.5s infinite;
+}
 
 @media (width>=768px) {
     .hnw-title h2{
